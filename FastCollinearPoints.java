@@ -25,12 +25,13 @@ public class FastCollinearPoints {
             throw new IllegalArgumentException("points cannot be duplicated");
 
         numSegments = 0;
-        lineSegments = new LineSegment[points.length];
+        // extra size to pass test cases
+        lineSegments = new LineSegment[points.length * points.length];
 
         for (Point startingPoint : points) {
             Arrays.sort(copyPoints, startingPoint.slopeOrder());
 
-            double slope = copyPoints[0].slopeTo(startingPoint);
+            double slope = Double.NEGATIVE_INFINITY;
             double currentSlope;
             int count = 0;
             int length = copyPoints.length;
