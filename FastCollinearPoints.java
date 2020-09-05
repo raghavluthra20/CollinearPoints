@@ -38,7 +38,7 @@ public class FastCollinearPoints {
             Point[] pointList = new Point[length];
 
             for (int i = 0; i < length; i++) {
-                // if (startingPoint.compareTo(copyPoints[i]) == 0)
+                // if (startingPoint.compareTo(copyPoints[i]) == 0) //
                 //     continue;
 
                 Point currentPoint = copyPoints[i];
